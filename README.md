@@ -10,3 +10,20 @@ Large Language Models (LLMs) have recently demonstrated impressive few-shot lear
 
 
 ## Code 
+
+
+
+
+
+## For bibtex citation
+
+```
+@inproceedings{ghosal-etal-2025-promptrefine,
+    title = "{P}rompt{R}efine: Enhancing Few-Shot Performance on Low-Resource {I}ndic Languages with Example Selection from related Example Banks",
+    author = "Ghosal, Soumya Suvra  and
+      Pal, Soumyabrata  and
+      Mukherjee, Koyel  and
+      Manocha, Dinesh",
+    booktitle = "Proceedings of the 2025 Conference of the Nations of the Americas Chapter of the Association for Computational Linguistics: Human Language Technologies (Volume 1: Long Papers)",
+    year = "2025",
+}
