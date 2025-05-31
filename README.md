@@ -79,7 +79,7 @@ Primary training hyperparameter configuration is in `configs/retriever_trainer.y
 
 ## References
 
-Our codebase has been adopted from [CEIL](https://github.com/HKUNLP/icl-ceil). We extend our sincere gratitude to the authors.
+Our codebase builds upon [CEIL](https://github.com/HKUNLP/icl-ceil), and our experiments are conducted using the [indic-gen-bench](https://github.com/google-research-datasets/indic-gen-bench) benchmark. We extend our sincere gratitude to the authors.
 
 
 ## For bibtex citation
