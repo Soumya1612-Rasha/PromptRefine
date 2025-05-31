@@ -2,7 +2,7 @@
 
 [![arXiv](https://img.shields.io/badge/arXiv-2412.05710-B31B1B.svg)](https://arxiv.org/pdf/2412.05710) <!-- GitHub Stars Badge (replace YourUser and YourRepo) --> 
 [![GitHub Stars](https://img.shields.io/github/stars/Soumya1612-Rasha/PromptRefine.svg?style=social)](https://github.com/Soumya1612-Rasha/PromptRefine/stargazers)
-
+[![Contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/Soumya1612-Rasha/PromptRefine/issues)
 
 <h3>⭐ Accepted for NAACL 2025</h3>
 
