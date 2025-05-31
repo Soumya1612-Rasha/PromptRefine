@@ -6,18 +6,18 @@ export WANDB_START_METHOD=thread
 export TOKENIZERS_PARALLELISM=false
 export HYDRA_FULL_ERROR=1
 
-gpu=4 #Number of GPUs #Method Name (affects the output folder where the model will be saved)
+gpu=4 #Number of GPUs 
 num_ice=16  #Number of Incontext Examples
 port=5300  #Does not need to be changed
 
 
-model_name="meta-llama/Meta-Llama-3.1-8B"
+model_name="meta-llama/Meta-Llama-3.1-8B" 
 n_tokens=6000   #Context Length 
 scr_batch_size=2  #Scoring Batch Size
 inf_batch_size=1  #Inference Batch Size
 task_name='xqor'
-test_lang_name="Manipuri"
-high_lang_name=["Bengali"]
+test_lang_name="Manipuri"  # target low-resource Indic language 
+high_lang_name=["Bengali"]  # List of closely-related auxiliary high-resource Indic languages 
 all_data=False
 language_list=("Manipuri" "Bengali")
 lang_list_string=$(IFS=, ; echo "${language_list[*]}")
