@@ -52,6 +52,15 @@ bash run_dpp_ours.sh
 
 Inside run_dpp_ours.sh, set the `epoch` variable to the iteration number that yielded the highest validation accuracy in previous step.
 
+## Datasets
+
+Our experiments are conducted on the [indic-gen-bench](https://github.com/google-research-datasets/indic-gen-bench) benchmark, using the following languages:
+
+**Low/Mid-Resource Languages:**  
+Bodo, Odia, Santali, Rajasthani, Manipuri, Awadhi, Marwari, Maithili.
+
+**Auxiliary High-Resource Languages:**  
+Bengali, Hindi, Marathi, Gujarati, Kannada, Malayalam, Tamil, Telugu, Urdu.
 
 ## Customization
 
