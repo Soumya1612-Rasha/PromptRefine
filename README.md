@@ -12,9 +12,8 @@ This codebase provides a Pytorch implementation for the paper: PromptRefine: Enh
 
 Large Language Models (LLMs) have recently demonstrated impressive few-shot learning capabilities through in-context learning (ICL). However, ICL performance is highly dependent on the choice of few-shot demonstrations, making the selection of the most optimal examples a persistent research challenge. This issue is further amplified in low-resource Indic languages, where the scarcity of ground-truth data complicates the selection process. In this work, we propose PromptRefine, a novel Alternating Minimization approach for example selection that improves ICL performance on low-resource Indic languages. PromptRefine leverages auxiliary example banks from related high-resource Indic languages and employs multi-task learning techniques to align language-specific retrievers, enabling effective cross-language retrieval. Additionally, we incorporate diversity in the selected examples to enhance generalization and reduce bias. Through comprehensive evaluations on four text generation tasks -- Cross-Lingual Question Answering, Multilingual Question Answering, Machine Translation, and Cross-Lingual Summarization using state-of-the-art LLMs such as LLAMA-3.1-8B, LLAMA-2-7B, Qwen-2-7B, and Qwen-2.5-7B, we demonstrate that PromptRefine significantly outperforms existing frameworks for retrieving examples.
 
-## 🚦 Getting Started
+## Getting Started
 
-**Setup in Minutes!**  
 We recommend using Python 3.8+ and PyTorch 2.0+. Clone this repo and install dependencies:
 
 ```
@@ -26,24 +25,24 @@ pip install -r requirements.txt
 
 ## PromptRefine
 
-For illustration, we have set the low-resource target language as Manipuri (`lang_name`) and the related high-resource auxiliary language as Bengali (`high_lang_name`). These can be easily configured by changing the `lang_name` and `high_lang_name` variables.
 
-# 1. Iterative Prompt Refinement: 
+### 1. Iterative Prompt Refinement: 
 
-To fine-tune the retriever embeddings iteratively using "Alternating Minimization" strategy(Section 4.1.2 in main paper), run:
+To fine-tune the retriever embeddings iteratively using the "Alternating Minimization" strategy(Section 4.1.2 in main paper), run:
 
 ```
 bash iter_algo.sh
 ```
+The following arguments need to be set:
 
 - `task_name`: The specific downstream task (e.g., `xquad`, `cross_sum`, `flores`, `xnli`).
 - `model_name`: The scorer LLM.
 - `lang_name`: Target low-resource Indic language.
-- `high_lang_name`: List of high-resource auxiliary language.
+- `high_lang_name`: List of high-resource auxiliary languages.
 
 After fine-tuning, `bash iter_algo_inf.sh` script runs inference on the validation set using the merged model from each iteration. To change the metric of inference, please refer to `src/inferencer.py`. Note down the iteration number that achieves the highest validation performance.
 
-# 2. Diversity Induced Fine-tuning: 
+### 2. Diversity Induced Fine-tuning: 
 
 Now, use the best merged model (based on validation performance) for training with Determinantal Point Processes (DPP) to encourage diversity in example selection:
 
@@ -54,7 +53,7 @@ bash run_dpp_ours.sh
 Inside run_dpp_ours.sh, set the `epoch` variable to the iteration number that yielded the highest validation accuracy in previous step.
 
 
-## 🛠️ Customization
+## Customization
 
 PromptRefine can be easily customized to support new tasks, datasets, models, and hyperparameters:
 
